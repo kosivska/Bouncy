@@ -1,0 +1,165 @@
+.contactUs {
+  background: url(../img/bg_section3.jpg) no-repeat;
+  background-size: cover;
+  color: @white;
+  font-family: 'Open Sans Pro', sans-serif;
+  padding: 4% 0 3% 0;
+
+  .contactUs__text {
+    height: 43px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .contactUs__button {
+    .capitalize;
+    font-size: 16px;
+    padding: 1% 2%;
+    margin: 10px 20px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: none;
+    letter-spacing: 1px;
+  }
+  .contactUs__button:before,
+  .contactUs__button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  .contactUs__button:before {
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+  }
+  .contactUs__button:after {
+    top: 0;
+    right: 0;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s;
+  }
+  .contactUs__button:hover:before,
+  .contactUs__button:hover:after{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
+  .contactUs__button:hover:before {
+    transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+  }
+  .contactUs__button:hover:after {
+    transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;
+  }
+  .contactUs__button:hover {
+    background: rgba(255,255,255,.2);
+  }
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 630px;
+    min-width: 320px;
+    height: auto;
+    z-index: -1;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    transition: opacity ease-in 0.6s;
+    &.open {
+      opacity: 1;
+      z-index: 101;
+      & + .overlay {
+        z-index: 100;
+        opacity: 0.5;
+      }
+    }
+    & + .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      background: grey;
+      opacity: 0;
+      transition: opacity ease-in 0.6s;
+    }
+    .dialog__content {
+     color: #444;
+     background: #fff;
+     position: relative;
+     border-radius: 3px;
+     margin: 0 auto;
+
+     .dialog__title {
+      margin: 0;
+      padding: 0.8em;
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #555;
+      text-transform: uppercase;
+      border-radius: 3px 3px 0 0;
+    }
+    .dialog__form {
+     margin-left: auto;
+     margin-right: auto;
+     padding: 15px 40px 30px;
+     margin: 0;
+     font-weight: 300;
+     font-size: 1.15em;
+
+     .dialog__input {
+       background: rgba(0, 0, 0, 0.1);
+       width: 100%;
+       height: 48px;
+       border: none;
+       border-radius: 4px;
+       display: block;
+       font-family: 'Source Sans Pro', sans-serif;
+       font-size: 15px;
+       color: #444;
+       padding-left: 20px;
+       padding-right: 20px;
+       margin-bottom: 20px;
+       box-sizing: border-box;
+     }
+     .form__message {
+      background: rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: 110px;
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 2px;
+      display: block;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 15px;
+      color: #444;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+    .form__button {
+      margin: 0 auto;
+      background: @mint;
+      padding: 10.5px 21px;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 18px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+}
+}
+
+
+
+

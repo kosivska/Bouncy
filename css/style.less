@@ -1,0 +1,91 @@
+@import 'base/reset.css';
+@import 'utils/mixins.less';
+@import 'layout/header.less';
+@import 'layout/portfolio.less';
+@import 'layout/team.less';
+@import 'layout/contactUs.less';
+@import 'layout/testimonials.less';
+@import 'layout/location.less';
+@import 'layout/footer.less';
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 900');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 400, 800');
+/*End Fonts*/
+
+/*Variables color*/
+@white: #ffffff;
+@mint: #19BD9A;
+@grey: #F3F3F3;
+@lightgrey: #f0f0f0;
+@dirtywhite: #fcfcfc;
+@colortitle: #333b46;
+@colordescription: #81868e;
+/*End Variables color*/
+
+.wrapper {
+	margin: 0 auto;
+	width: 87%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	@media (max-width: 1130px) {
+		width: 77%;
+	}
+}
+
+.section__description {
+	width: 40%;
+	height: 135px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	@media (max-width: 1024px) {
+		width: 61%;
+	}
+	@media (min-width: 1600px) {
+		width: 30%;
+	}
+	.section__title {
+		font-family: 'Source Sans Pro', sans-serif;
+		text-align: center;
+		.uppercase;
+		font-weight: 300;
+		color: @colortitle;
+		font-size: 22px;
+		letter-spacing: 3px;
+	}
+	.section__info {
+		font-family: 'Open Sans Pro', sans-serif;
+		font-size: 14px;
+		color: @colordescription;
+		letter-spacing: 1px;
+		text-align: center;
+		line-height: 24px;
+	}
+}
+.dots {
+	.slick-active button:before {
+		background: @mint;
+	}
+	li {
+		margin: 0;
+		width: 10px;
+		height: 10px;
+		margin-right: 10px;
+
+		button {
+			width: 10px;
+			height: 10px;
+			&:before {
+				border-radius: 94%;
+				border: 1px solid @mint;
+				height: 8px;
+				width: 8px;
+				font-size: 0;
+				line-height: 0;
+			}
+		}
+	}
+}
